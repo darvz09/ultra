@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes} from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { Button } from '../../globalStyles';
-import { Nav,
-         NavbarContainer,
-         NavLogo, 
-         NavIcon,
-         MobileIcon,
-         NavMenu,
-         NavItem,
-         NavLink,
-         NavItemBtn,
-         NavBtnLink
-        } from './Navbar.elements';
+import {
+    Nav,
+    NavbarContainer,
+    NavLogo,
+    NavIcon,
+    MobileIcon,
+    NavMenu,
+    NavItem,
+    NavLink,
+    NavItemBtn,
+    NavBtnLink
+} from './Navbar.elements';
 
 
 const Navbar = () => {
@@ -28,27 +29,27 @@ const Navbar = () => {
         } else {
             setButton(true)
         }
-    };    
-        useEffect(() => {
-            showButton();
-        }, []);
-        window.addEventListener('resize', showButton);
+    };
+    useEffect(() => {
+        showButton();
+    }, []);
+    window.addEventListener('resize', showButton);
     return (
         <>
-        <IconContext.Provider value={{color:'#fff'}}>
-            <Nav>
-                <NavbarContainer>
-                    <NavLogo to='/' onClick={closeMobileMenu}>
-                        <NavIcon />
-                        ULTRA
-                    </NavLogo>
+            <IconContext.Provider value={{ color: '#fff' }}>
+                <Nav>
+                    <NavbarContainer>
+                        <NavLogo to='/' onClick={closeMobileMenu}>
+                            <NavIcon />
+                            ULTRA darvs
+                        </NavLogo>
                         <MobileIcon onClick={handleClick}>
                             {click ? <FaTimes /> : <FaBars />}
                         </MobileIcon>
                         <NavMenu onClick={handleClick} click={click} >
                             <NavItem>
-                                <NavLink to='/'>Home</NavLink>
-                            </NavItem> 
+                                <NavLink to='/'>Home </NavLink>
+                            </NavItem>
                             <NavItem>
                                 <NavLink to='/services'>Services</NavLink>
                             </NavItem>
@@ -62,7 +63,7 @@ const Navbar = () => {
                                             SIGN UP
                                         </Button>
                                     </NavBtnLink>
-                                ) : ( 
+                                ) : (
                                     <NavBtnLink to='/sign-up' >
                                         <Button fontBig primary>
                                             SIGN UP
@@ -70,14 +71,14 @@ const Navbar = () => {
                                     </NavBtnLink>
                                 )}
                             </NavItemBtn>
-                            
+
                         </NavMenu>
-                </NavbarContainer>
-            </Nav>
-        </IconContext.Provider>
+                    </NavbarContainer>
+                </Nav>
+            </IconContext.Provider>
         </>
     )
-  }
+}
 
-                                
+
 export default Navbar
