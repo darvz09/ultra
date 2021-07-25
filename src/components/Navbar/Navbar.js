@@ -41,7 +41,7 @@ const Navbar = () => {
                     <NavbarContainer>
                         <NavLogo to='/' onClick={closeMobileMenu}>
                             <NavIcon />
-                            ULTRA wink
+                            ULTRA site
                         </NavLogo>
                         <MobileIcon onClick={handleClick}>
                             {click ? <FaTimes /> : <FaBars />}
